@@ -51,32 +51,15 @@ export const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Image & Stats */}
+          {/* Stats Cards */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Main Image */}
-            <div className="relative rounded-3xl overflow-hidden mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop"
-                alt="Industrial polymer manufacturing"
-                className="w-full h-64 lg:h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border">
-                  <p className="text-sm text-muted-foreground">
-                    State-of-the-art polymer distribution serving industries across Delhi NCR
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Background Card */}
-            <div className="absolute inset-4 bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 rounded-3xl blur-2xl -z-10" />
+            <div className="absolute inset-4 bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 rounded-3xl blur-2xl" />
             
             <div className="relative grid gap-4">
               {stats.map((stat, index) => (
