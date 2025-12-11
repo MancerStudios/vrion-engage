@@ -100,9 +100,8 @@ export const Header = () => {
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <Button
-            variant="outline"
             size="sm"
-            className="hidden md:flex items-center gap-2 border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300"
+            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-neon-cyan to-neon-green text-dark-bg font-semibold hover:shadow-[0_0_30px_hsl(185_100%_50%/0.5)] transition-all duration-300"
           >
             <Download className="w-4 h-4" />
             Brochure
