@@ -18,7 +18,7 @@ const products = [
     applications: "Clear sheets, lighting profiles, medical disposables, caps, cutlery, food trays, packaging, blow-moulded bottles.",
     supplier: "Supreme Petrochem Ltd.",
     color: "cyan",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=300&fit=crop",
   },
   {
     icon: Shield,
@@ -26,7 +26,7 @@ const products = [
     applications: "Thermoformed packaging, beverage glasses, toys, electronics accessories, refrigerator components.",
     supplier: null,
     color: "green",
-    image: "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=400&h=300&fit=crop",
   },
   {
     icon: Settings,
@@ -34,7 +34,7 @@ const products = [
     applications: "AC parts, camera parts, pen barrels, refrigerator liners, fatty food packaging.",
     supplier: null,
     color: "blue",
-    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=400&h=300&fit=crop",
   },
   {
     icon: Package,
@@ -42,7 +42,7 @@ const products = [
     applications: "Containers, pipes, packaging films, medical disposables, household products.",
     supplier: null,
     color: "cyan",
-    image: "https://images.unsplash.com/photo-1586528116022-8e3d3f1c4c94?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=400&h=300&fit=crop",
   },
   {
     icon: Film,
@@ -50,7 +50,7 @@ const products = [
     applications: "Flexible packaging, lamination films, tubing, bags, soft containers.",
     supplier: null,
     color: "green",
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
   },
   {
     icon: Cylinder,
@@ -66,7 +66,7 @@ const products = [
     applications: "Shoe midsoles, foam sheets, clinging films.",
     supplier: null,
     color: "cyan",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=300&fit=crop",
   },
 ];
 
