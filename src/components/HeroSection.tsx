@@ -126,9 +126,8 @@ export const HeroSection = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
               onClick={() => scrollToSection("about")}
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg"
+              className="bg-neon-blue/20 border-2 border-neon-blue text-neon-blue font-semibold px-8 py-6 text-lg hover:bg-neon-blue hover:text-dark-bg hover:shadow-[0_0_40px_hsl(220_100%_60%/0.4)] transition-all duration-300"
             >
               About Vrion Global
             </Button>
@@ -187,25 +186,6 @@ export const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2"
-          >
-            <motion.div
-              animate={{ opacity: [1, 0.3, 1] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 rounded-full bg-neon-cyan"
-            />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
