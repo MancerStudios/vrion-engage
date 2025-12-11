@@ -92,73 +92,91 @@ export const PerformanceSection = () => {
             </div>
           </motion.div>
 
-          {/* Feature Cards */}
+          {/* Image & Feature Cards */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-4"
+            className="space-y-6"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-neon-cyan/30 hover:shadow-lg transition-all duration-300"
-              >
-                {/* Animated Icon */}
-                <div className="mb-4">
-                  {feature.animation === "glow" ? (
-                    <motion.div
-                      animate={{
-                        boxShadow: [
-                          "0 0 0px hsl(185 100% 50% / 0.3)",
-                          "0 0 30px hsl(185 100% 50% / 0.5)",
-                          "0 0 0px hsl(185 100% 50% / 0.3)",
-                        ],
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
-                    >
-                      <feature.icon className="w-6 h-6 text-neon-cyan" />
-                    </motion.div>
-                  ) : feature.animation === "morph" ? (
-                    <motion.div
-                      animate={{ borderRadius: ["30%", "50%", "30%"] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="w-12 h-12 bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
-                    >
-                      <feature.icon className="w-6 h-6 text-neon-cyan" />
-                    </motion.div>
-                  ) : feature.animation === "stack" ? (
-                    <motion.div
-                      animate={{ y: [0, -3, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
-                    >
-                      <feature.icon className="w-6 h-6 text-neon-cyan" />
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                      className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
-                    >
-                      <feature.icon className="w-6 h-6 text-neon-cyan" />
-                    </motion.div>
-                  )}
+            {/* Hero Image */}
+            <div className="relative rounded-3xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&h=350&fit=crop"
+                alt="Advanced polymer manufacturing facility"
+                className="w-full h-56 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-card/60 via-transparent to-card/60" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-card/80 backdrop-blur-sm rounded-xl px-6 py-3 border border-neon-cyan/30">
+                  <span className="text-neon-cyan font-display font-semibold">Premium Quality Materials</span>
                 </div>
+              </div>
+            </div>
 
-                <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-neon-cyan transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
+            {/* Feature Cards Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.03 }}
+                  className="group p-6 rounded-2xl bg-card border border-border hover:border-neon-cyan/30 hover:shadow-lg transition-all duration-300"
+                >
+                  {/* Animated Icon */}
+                  <div className="mb-4">
+                    {feature.animation === "glow" ? (
+                      <motion.div
+                        animate={{
+                          boxShadow: [
+                            "0 0 0px hsl(185 100% 50% / 0.3)",
+                            "0 0 30px hsl(185 100% 50% / 0.5)",
+                            "0 0 0px hsl(185 100% 50% / 0.3)",
+                          ],
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
+                      >
+                        <feature.icon className="w-6 h-6 text-neon-cyan" />
+                      </motion.div>
+                    ) : feature.animation === "morph" ? (
+                      <motion.div
+                        animate={{ borderRadius: ["30%", "50%", "30%"] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="w-12 h-12 bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
+                      >
+                        <feature.icon className="w-6 h-6 text-neon-cyan" />
+                      </motion.div>
+                    ) : feature.animation === "stack" ? (
+                      <motion.div
+                        animate={{ y: [0, -3, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
+                      >
+                        <feature.icon className="w-6 h-6 text-neon-cyan" />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                        className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/20 to-neon-green/20 flex items-center justify-center"
+                      >
+                        <feature.icon className="w-6 h-6 text-neon-cyan" />
+                      </motion.div>
+                    )}
+                  </div>
+
+                  <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-neon-cyan transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
