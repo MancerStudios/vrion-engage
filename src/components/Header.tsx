@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import vgplLogo from "@/assets/vgpl-logo.webp";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -63,18 +64,14 @@ export const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <motion.div
-          className="flex items-center gap-3"
+          className="flex items-center"
           whileHover={{ scale: 1.02 }}
         >
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-green flex items-center justify-center font-display font-bold text-dark-bg text-lg">
-            V
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-display font-semibold text-white text-lg">
-              Vrion Global
-            </span>
-            <span className="text-xs text-white/50 block -mt-1">VGPL</span>
-          </div>
+          <img 
+            src={vgplLogo} 
+            alt="Vrion Global Pvt. Ltd." 
+            className="h-10 w-auto"
+          />
         </motion.div>
 
         {/* Desktop Navigation */}
